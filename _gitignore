@@ -2,3 +2,6 @@
 /bin/
 /.classpath
 /.project
+/xtend-gen/
+/_classpath.xml
+/_project.xml
