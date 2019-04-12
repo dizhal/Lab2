@@ -1,11 +1,8 @@
 package by.bsuir.lab2.Control;
 
-import javafx.geometry.Insets;
-import javafx.scene.Scene;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.RowConstraints;
-import javafx.geometry.HPos;
 
 public class MyGridPane {
 	private GridPane root;

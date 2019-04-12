@@ -9,13 +9,13 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
-import javafx.scene.Scene;
 import javafx.scene.control.RadioButton;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.BorderPane;
 import by.bsuir.lab2.Classes.Student;
 import by.bsuir.lab2.Classes.Coffee;
-import javafx.stage.Stage;
+import by.bsuir.lab2.Classes.Sugar;
+import by.bsuir.lab2.Classes.Teapot;
 
 public class ActionButton{
 	private Constancts con;
@@ -76,10 +76,11 @@ public class ActionButton{
     	});
 	}
 
-	public Integer btnSpreadOnSugar(BorderPane root) {
+	public Integer btnSpreadOnSugar(BorderPane root, Sugar s) {
 		btn.spreadOnSugar.setOnAction(new EventHandler<ActionEvent>() {		
     	    public void handle(ActionEvent event) {
     	    	tempInteger=Integer.parseInt(tf.weightSugar.getText());
+    	    	s.setWeight(tempInteger);
     	    	double temp=tempInteger*con.DENCITY_SUGAR;
     	    	lab.volume.setText(con.VOLUME + " - " +  temp + "мл");   	    	
     	    	lab.content.setText(con.CONTENT + " - " + con.SUGAR);
@@ -165,11 +166,11 @@ public class ActionButton{
     	});
 	}
 	
-    public int[] btnToFillWater1(BorderPane root) {
+    public int[] btnToFillWater1(BorderPane root, Teapot t) {
     	btn.toFillWater1.setOnAction(new EventHandler<ActionEvent>() {				
     	    public void handle(ActionEvent event) {
-    	    	mas[0]=Integer.parseInt(tf.enterWater.getText());
-    	    	mas[1]=Integer.parseInt(tf.enterTemperature.getText());
+    	    	t.setVolume(Integer.parseInt(tf.enterWater.getText()));
+    	    	t.setTemperature(Integer.parseInt(tf.enterTemperature.getText()));
     	    	grid.getRoot().add(btn.hateUp ,1, 2);
     	    	root.setCenter(grid.getRoot());
     		}		
@@ -195,7 +196,7 @@ public class ActionButton{
     	    	grid.getRoot().getChildren().clear();
     	    	GridPane.setMargin(lab.volume, new Insets(10));
     	    	GridPane.setMargin(lab.content, new Insets(10));
-    	    	GridPane.setMargin(btn.toPour, new Insets(10));
+    	    	GridPane.setMargin(btn.toFillWater2, new Insets(10));
     	    	grid.getRoot().add(lab.content, 0, 0); 
     	    	grid.getRoot().add(lab.volume, 0, 1); 
     	    	grid.getRoot().add(btn.toFillWater2, 0, 2);
@@ -213,11 +214,10 @@ public class ActionButton{
     	});
     }
     
-    public void btnSelect1(BorderPane root, Student s) {
+    public void btnSelect1(BorderPane root, Student s,Sugar sugar) {
     	btn.select1.setOnAction(new EventHandler<ActionEvent>() {			
     	    public void handle(ActionEvent event) {  	    	
-    	    	RadioButton selection=(RadioButton) btn.group11.getSelectedToggle();
-    	    	tempStringBuffer.append(selection.getText());   	    	
+    	    	RadioButton selection=(RadioButton) btn.group11.getSelectedToggle();	    	
     	    	s.setCondition(tempStringBuffer);
     	    	tempString=selection.getText();
     	    	grid.getRoot().getChildren().clear();
@@ -229,21 +229,21 @@ public class ActionButton{
     	    	grid.getRoot().add(btn.toFillSugar, 0, 2);
     	    	root.setCenter(grid.getRoot());       	    
     	    	if(tempString==con.YES) {
-    				btnyes1(root);
+    				btnyes1(root,sugar);
     			}
     	    	tempStringBuffer.delete(0, 10);
     		}		
     	});
     }
     
-    public void btnyes1(BorderPane root) {
+    public void btnyes1(BorderPane root, Sugar s) {
     	grid.getRoot().getChildren().clear();
     	GridPane.setMargin(lab.sugarRequest, new Insets(10));
     	grid.getRoot().add(lab.sugarRequest, 0, 0); 
     	grid.getRoot().add(tf.weightSugar, 1, 0); 
     	grid.getRoot().add(btn.spreadOnSugar, 1, 1); 
     	root.setCenter(grid.getRoot());   	
-    	btnSpreadOnSugar(root);
+    	btnSpreadOnSugar(root,s);
     }
     
     public void btnSelect2(BorderPane root, Student s,StringBuffer coffeeTest) {
