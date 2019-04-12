@@ -3,35 +3,38 @@ package by.bsuir.lab2.Elements;
 public class Constancts {
 	public static final String NAME_TITLE = "Lab2";	
 	
-	public static final String QUESTION_NAME="Как тебя зовут?";
-	public static final String FURTHET="Далее";	
+	public static final String QUESTION_NAME="РљР°Рє С‚РµР±СЏ Р·РѕРІСѓС‚?";
+	public static final String FURTHET="Р”Р°Р»РµРµ";	
 	
-	public static final String MAKE_COFFEE="Сделать кофе";
-	public static final String REQUEST_FOR_SUGAR_WEIGHT="Введите массу сахара в граммах";
+	public static final String MAKE_COFFEE="РЎРґРµР»Р°С‚СЊ РєРѕС„Рµ";
+	public static final String REQUEST_FOR_SUGAR_WEIGHT="Р’РІРµРґРёС‚Рµ РјР°СЃСЃСѓ СЃР°С…Р°СЂР° РІ РіСЂР°РјРјР°С…";
 	
-	public static final String SUGAR="сахар";
+	public static final String SUGAR="СЃР°С…Р°СЂ";
 	public static final double DENCITY_SUGAR=0.72;
 
-	public static final String TO_FILL="Наполнить";
-	public static final String QUESTION_COFFEE="Какое кофе вы хотите?";
-	public static final String REQUEST_FOR_WATER="Введите объём воды";
-	public static final String REQUEST_FOR_TEMPERATURE="Введите температуру воды";
-	public static final String END="Кофе готово!!!";
-	public static final String CONTENT="Содержимое";
-	public static final String VOLUME="Объём";
+	public static final String TO_FILL="РќР°РїРѕР»РЅРёС‚СЊ";
+	public static final String QUESTION_COFFEE="РљР°РєРѕРµ РєРѕС„Рµ РІС‹ С…РѕС‚РёС‚Рµ?";
+	public static final String REQUEST_FOR_WATER="Р’РІРµРґРёС‚Рµ РѕР±СЉС‘Рј РІРѕРґС‹";
+	public static final String REQUEST_FOR_TEMPERATURE="Р’РІРµРґРёС‚Рµ С‚РµРјРїРµСЂР°С‚СѓСЂСѓ РІРѕРґС‹";
+	public static final String END="РљРѕС„Рµ РіРѕС‚РѕРІРѕ!!!";
+	public static final String CONTENT="РЎРѕРґРµСЂР¶РёРјРѕРµ";
+	public static final String VOLUME="РћР±СЉС‘Рј";
 	
-	public static final String CAPPUCCINO="Капучино";
-	public static final String AMERICANO="Американо";
-	public static final String LATTE="Латте";
-	public static final String SELECT="Выбрать";
-	public static final String SPREAD_ON="Насыпать";
-	public static final String REQUEST_FOR_COFFEE_WEIGHT="Введите массу кофе в граммах";
-	public static final String COFFEE="кофе";
+	public static final String CAPPUCCINO="РљР°РїСѓС‡РёРЅРѕ";
+	public static final String AMERICANO="РђРјРµСЂРёРєР°РЅРѕ";
+	public static final String LATTE="Р›Р°С‚С‚Рµ";
+	public static final String SELECT="Р’С‹Р±СЂР°С‚СЊ";
+	public static final String SPREAD_ON="РќР°СЃС‹РїР°С‚СЊ";
+	public static final String REQUEST_FOR_COFFEE_WEIGHT="Р’РІРµРґРёС‚Рµ РјР°СЃСЃСѓ РєРѕС„Рµ РІ РіСЂР°РјРјР°С…";
+	public static final String COFFEE="РєРѕС„Рµ";
 	public static final double DENCITY_COFFEE=0.56;
 	
-	public static final String TO_POUR="Налить";
-	public static final String TO_FILL_WITH_WATER="Наполнить водой";
-	public static final String HEAT_UP="Нагреть";
-	public static final String WATER="вода";
-
+	public static final String TO_POUR="РќР°Р»РёС‚СЊ";
+	public static final String TO_FILL_WITH_WATER="РќР°РїРѕР»РЅРёС‚СЊ РІРѕРґРѕР№";
+	public static final String HEAT_UP="РќР°РіСЂРµС‚СЊ";
+	public static final String WATER="РІРѕРґР°";
+	public static final String REQUEST_FOR_SUGAR="РҐРѕС‚РёС‚Рµ РґРѕР±Р°РІРёС‚СЊ РµС‰С‘ СЃР°С…Р°СЂ?";
+	public static final String REQUEST_FOR_COFFEE="РҐРѕС‚РёС‚Рµ РґРѕР±Р°РІРёС‚СЊ РµС‰С‘ РєРѕС„Рµ?";
+	public static final String YES="Р”Р°";
+	public static final String NO="РќРµС‚";
 }

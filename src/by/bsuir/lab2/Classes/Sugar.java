@@ -16,16 +16,17 @@ public class Sugar extends Thing {
 	private Cup cup;
 		
 	public Sugar() {
-		super();
-		con=new Constancts();
+		super();  
 		cup=new Cup();
 	}
 	
 	public void spreadOn(BorderPane root, ActionButton ab) {
 		weight=ab.btnSpreadOnSugar(root);
 		double temp=weight*con.DENCITY_SUGAR;
-		cup.setVolume(temp);
+		cup.setVolume(temp);		
+	}
+	
+	public void next(BorderPane root, ActionButton ab) {
 		cup.toFill(root, ab,con.SUGAR);
-		
 	}
 }

@@ -2,7 +2,7 @@ package by.bsuir.lab2.Elements;
 
 import javafx.scene.control.TextField;
 
-public class TextFieldClass extends Constancts{
+public class TextFieldClass {
 	public TextField nameStudent;
 	
 	public TextField weightSugar;

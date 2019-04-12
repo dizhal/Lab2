@@ -16,7 +16,6 @@ public class Cup extends Thing{
 	private Constancts con;
 	
 	public Cup() {
-		con=new Constancts();
 		volume=0;
 		content="";
 	}	
@@ -24,17 +23,11 @@ public class Cup extends Thing{
 	
 	public void toFill(BorderPane root, ActionButton ab, String contentTemp) {
 		
-		if(contentTemp==con.SUGAR) {
-			content=contentTemp;
-			ab.btnToFillSugar(root);
-		}
-		else if(contentTemp==con.COFFEE){
-			content=contentTemp;
-			ab.btnToFillCoffee(root);
-		}
-		else if(contentTemp==con.WATER) {
-			content=contentTemp;
-			ab.btnToFillWater2(root);
+		content=contentTemp;
+		switch(content) {
+		case "сахар": ab.btnToFillSugar(root); break;
+		case "кофе": ab.btnToFillCoffee(root); break;
+		case "вода": ab.btnToFillWater2(root); break;					
 		}
 		
 	}

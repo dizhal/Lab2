@@ -14,19 +14,17 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.control.Label;
 
 public class Coffee extends Thing{
-	private String coffeeTaste;
+	private StringBuffer coffeeTaste;
 	private Cup cup;
 	private Constancts con;
 	
 	public Coffee() {
-		coffeeTaste="";
+		coffeeTaste=new StringBuffer();
 		cup=new Cup();
-		con=new Constancts();
 	}
 	
 	public void select(BorderPane root, ActionButton ab) {	
-		coffeeTaste=ab.btnSelect(root);
-		System.out.println(coffeeTaste);
+		ab.btnSelect(root,this);
 	}
 	
 	public void spreadOn(BorderPane root, ActionButton ab) {
@@ -34,7 +32,18 @@ public class Coffee extends Thing{
 		weight=ab.btnSpreadOnCoffee(root,coffeeTaste);
 		double temp=weight*con.DENCITY_SUGAR;
 		cup.setVolume(temp);
+	}
+	
+	public void next(BorderPane root, ActionButton ab) {
 		cup.toFill(root, ab,con.COFFEE);
 	}
+	
+	public void setCoffee(StringBuffer temp) {
+		coffeeTaste.delete(0,10);
+		coffeeTaste.append(temp);
+	}
 
+	public StringBuffer getCoffee() {
+		return coffeeTaste;
+	}
 }

@@ -20,7 +20,6 @@ public class Teapot extends Thing{
 		volume=0;
 		temperature=0;
 		cup=new Cup();
-		con=new Constancts();
 	}
 
 	public void toFillWater(BorderPane root, ActionButton ab) {
@@ -28,12 +27,10 @@ public class Teapot extends Thing{
 		mas=ab.btnToFillWater1(root);
 		volume=mas[0];
 		temperature=mas[1];
-		hateUp(root,ab);
 	}
 	
 	public void hateUp(BorderPane root, ActionButton ab) {
 		ab.btnHateUp(root);
-		toPour(root,ab);
 	}
 	
 	public void toPour(BorderPane root, ActionButton ab) {
